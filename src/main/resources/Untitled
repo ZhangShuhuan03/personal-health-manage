@@ -1,0 +1,30 @@
+基于已有的SpringBoot后端【个人健康管理系统】，独立生成一套Vue3 + Vite + Element Plus前端项目，实现全部健康记录CRUD页面+AI健康分析功能，前后端分离。
+## 一、前端技术栈
+Vue3 + Vite5 + Element Plus + Axios + Vue Router 4
+## 二、前端文件夹名称
+health-web（放在和后端同级目录，外层项目文件夹personal-health-manage下，后端文件夹命名health-server）
+## 三、页面功能清单
+1. 首页布局：侧边菜单栏、顶部导航栏
+2. 健康记录管理主页面
+   - 分页表格展示所有健康数据（身高/体重/BMI/血压/心率/运动时长/睡眠/饮食）
+   - 多条件筛选框（时间范围、BMI区间）
+   - 新增记录弹窗、编辑记录弹窗，表单必填校验
+   - 单条删除、批量多选删除按钮
+3. AI健康分析弹窗功能
+   - 表格每行操作栏【生成健康建议】按钮
+   - 点击后调用后端SpringAI接口，弹窗展示AI返回的饮食、运动、作息改善建议
+4. 全局封装axios请求、统一响应拦截、统一错误提示
+## 四、硬性规范
+1. 后端基础请求地址统一配置为 http://localhost:8080
+2. 路由单独抽离、接口请求单独封装api文件夹
+3. 样式简洁美观，适配课程设计答辩展示
+4. 输出完整：package.json、路由文件、api请求文件、主页面组件、工具类
+5. 附带前端启动说明：npm install / npm run dev
+## 五、接口对接清单（和后端一一对应）
+1. GET /health/list 分页查询健康记录
+2. GET /health/{id} 根据id查询单条记录
+3. POST /health/add 新增健康记录
+4. PUT /health/update 修改健康记录
+5. DELETE /health/{id} 单条删除
+6. DELETE /health/batch 批量删除
+7. POST /health/ai/suggest 传入健康id，AI生成健康建议

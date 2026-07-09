@@ -1,36 +1,18 @@
-# Maven
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-release.properties
+# Java后端
+health-server/target/
+health-server/.idea/
+health-server/*.log
+health-server/*.iml
 
-# IDE
+# Vue前端
+health-web/node_modules/
+health-web/dist/
+health-web/.vite/
+health-web/node_modules/.cache
+
+# 系统&IDE
 .idea/
-*.iml
-*.ipr
-*.iws
-.project
-.classpath
-.settings/
 .vscode/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-logs/
-
-# Env & secrets
-.env
-*.env
-health-server/src/main/resources/application.yml
-
-# Node
-node_modules/
-dist/
-
-# Stray root folder (not health-server/src or health-web/src)
-/src/
+*.DS_Store
+*.tmp
+*.jfr
